@@ -10,7 +10,9 @@ const createTuit = async (req, res) => {
     res.json(insertedTuit);
 }
 const findTuits  = async (req, res) => {
+    console.log("find tuits got called")
     const tuits = await tuitsDao.findTuits()
+    console.log("TESTING log:", tuits)
     res.json(tuits)
 }
 
